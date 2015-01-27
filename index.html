@@ -1086,7 +1086,7 @@
                                 </div>
                             </div>
 
-                            <h3><strong>4.2</strong> The wwwProd build process &amp; server</h3>
+                            <h3><strong>4.2</strong> The wwwProd Build Process &amp; Server</h3>
 
                             <p>The wwwDev process are the gulp tasks which get run after development is done. The process will create a production ready set of files. For more details on the wwwProd process examine the <a href="https://github.com/telerik/whatsername/blob/master/gulpfile.js">gulp.js</a> file.</p>
 
@@ -1114,9 +1114,9 @@
 
                             <img src="images/Ninja-6.png" class="ninja noBorder" />
                             
-                            <h2><strong>5.</strong> whats-er-name application architecture</h2>
+                            <h2><strong>5.</strong> whats-er-name Application Architecture</h2>
 
-                            <h3><strong>5.1</strong> <code>index.html</code> overview</h3>
+                            <h3><strong>5.1</strong> <code>index.html</code> Overview</h3>
 
                             <p>There will be only one valid HTML file (i.e. doctype, header, etc..) in the entire application. It will be called <code>index.html</code> and it will reside in the <code>src</code> folder. All other assets will be consider a module that is included via <code>index.html</code> using a <code>&lt;script&gt;</code> element, <code>&lt;link&gt;</code> element, or the build process (i.e. <a href="https://github.com/coderhaoxin/gulp-file-include">client-side includes</a>).</p>
 
@@ -1124,7 +1124,7 @@
 
                             <p>Note that when the application is instantiated (i.e. <code>kendo.mobile.Application()</code> is invoked) the mobile application logic is instantiating everything (e.g. view, layouts, widgets etc..) that is defined using declarative markup. In other words, anything declaratively defined is instantiated when the application first boots up.</p>
 
-                            <h3><strong>5.2</strong> Application name space</h3>
+                            <h3><strong>5.2</strong> Application Name Space</h3>
 
                             <p>The Kendo UI Mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/application">application</a> logic, by default, looks for supporting JavaScript in the global scope. This factor forces the use of a global name space instead of privately scoped modules with inject scopes. Thus the whats-er-name application uses a global name space to store JavaScript code relating to the application so that any module can gain a reference to another modules interface.</p>
 
@@ -1146,7 +1146,7 @@
                                 </div>
                             </div>
 
-                            <h3><strong>5.3</strong> Run/instantiate application</h3>
+                            <h3><strong>5.3</strong> Run/Instantiate Application</h3>
 
                             <p>Like I already stated, the mobile application is instantiated by the last script parsed in the <code>index.html</code> file. This is where you'd provide any settings for the <code>kendo.mobile.Application</code> instance. Below I am showing the JavaScript which instantiates the whats-er-name application.</p>
                             
@@ -1163,7 +1163,7 @@
 
                             <p>Don't forget, creating an instance of <code>kendo.mobile.Application</code> bootstraps the entire application.</p>
 
-                            <h3><strong>5.4</strong> Module naming</h3>
+                            <h3><strong>5.4</strong> Module Naming</h3>
 
                             <p>The application is organized into logical directories and files based on the user interface. The directories and files are semantically named based on the semantical purpose of the view or feature in the UI (read more about this in <a href="#3.5-ui-directory">section 3</a>). </p>
 
@@ -1214,7 +1214,7 @@
 
                             <p>2) The ui directories should contain modules named with the same root words contained in the directory name (e.g. the <code>addName</code> directory contains <code>addNameView.html</code> and <code>addNameViewModel.js</code> files).</p>
 
-                            <h3><strong>5.5</strong> Defining view modules</h3>
+                            <h3><strong>5.5</strong> Defining View Modules</h3>
 
                             <p>View modules are html files containing mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/view">views</a> with declarative attributes and likely declaratively define mobile widgets. This shouldn't be a surprise to you if you fully grok the MVVM pattern. The view declaratively connects to the view-model. For example in the <code>viewerView.html</code> file shown below the <code>data-model</code> attribute binds <code>viewerViewModel.js</code> to the view declaratively when the application is started.</p> 
 
@@ -1241,13 +1241,13 @@
                                 </div>
                             </div>
 
-                            <h3><strong>5.6</strong> Defining layout modules</h3>
+                            <h3><strong>5.6</strong> Defining Layout Modules</h3>
 
                             <p>The whats-er-name application uses a single layout for all of its mobile views (i.e. <code>/src/shared/layouts/global/globalLayout.html</code>), but if you mimic the architecture prescribed in this guide, you'll more than likely have more than one view  layout and associating styles. When this occurs, the HTML and CSS should be placed in the same directory which contains the view HTML. Make sure you end both files with the word "Layout".</p>
 
                             <p>For example, if the <code>viewerView.html</code> module used a unique layout there would be a viewerLayout.html module and possibly a viewerLayout.css file in the same directory (or, shared directory if the view shared the layout with another view).</p>
 
-                            <h3><strong>5.7</strong> Defining view-model modules</h3>
+                            <h3><strong>5.7</strong> Defining view-model Modules</h3>
 
                             <p>There is a strong relationship between the view and the view-model. In the MVVM pattern the view-model typically contains controller-like logic. One can declaratively create a lot of abstracted functionality in the HTML view, but it's the view-model where all of the observed JavaScript code resides that drives the view.</p>
 
@@ -1295,7 +1295,7 @@
                                 </div>
                             </div>
 
-                            <h3><strong>5.8</strong> Defining model modules</h3>
+                            <h3><strong>5.8</strong> Defining Model Modules</h3>
 
                             <p>The pattern for creating model JavaScript files differs from creating model-view files. Models should be stored one level deep from the top global name space in a logical and semantically minded name space (e.g. <code>viewerModel</code>). This is because models are typically used by several views. In the whats-er-name application this is why the two models used in the application are found in the shared directory and not a view-specific directory. It would not be logical to place models on the name space of a specific view because of the potential of being used by more than one view. Therefore, models are never properties of view name spaces (i.e. <code>wrn.viewer.model = ...</code>).</p>
 
@@ -1339,7 +1339,7 @@
                                 </div>
                             </div>
 
-                            <h3><strong>5.9</strong> Defining utility modules</h3>
+                            <h3><strong>5.9</strong> Defining Utility Modules</h3>
                             
                             <p>Any utility objects/functionality needed by all JavaScript modules can be place directly on the name space object as property which specifically describes the utility. Below I showing the <code>makeId.js</code> utility code as an example pattern for adding utility JavaScript modules into the whats-er-name architecture.</p>
 
@@ -1363,7 +1363,7 @@
 
                             <p>Utility modules are always stored in the <code>shared/utilities</code> directory.</p>
 
-                            <h3><strong>5.10</strong> Defining template modules</h3>
+                            <h3><strong>5.10</strong> Defining Template Modules</h3>
 
                             <p>Kendo UI mobile widgets can make use of Kendo UI <a href="http://docs.telerik.com/kendo-ui/framework/templates/overview">templates</a>. The whats-er-name application uses <code>&lt;script&gt;</code> elements to house Kendo UI Mobile HTML templates in <code>.html</code> files (included into the index.html using client-side includes).</p>
 
@@ -1391,7 +1391,7 @@
                                 </div>
                             </div>
 
-                            <h3><strong>5.11</strong> Use imperative widget instantiation when needed</h3>
+                            <h3><strong>5.11</strong> Use Imperative Widget Instantiation When Needed</h3>
 
                             <p>Don't be too dogmatic about only using declarative instantiation patterns for widgets contained in mobile views. Sometimes it's necessary to <a href="http://docs.telerik.com/kendo-ui/basics/jquery-initialization#initialize-a-kendo-ui-widget-using-the-jquery-plugin-syntax">imperatively instantiate</a> a mobile widget using code, not markup. You simply have no choice in the matter. I chose to imperatively create the <code>kendoMobileScrollView</code> widget in the <code>viewerViewModel.js</code> file because it was logically necessary. Sometimes it's simply the path of least resistance in terms of code and code complexity. Other times, its the only solution.</p>
 
@@ -1404,7 +1404,7 @@
 
                             <img src="images/Ninja-1.png" class="ninja noBorder" />
                             
-                            <h2><strong>6.</strong> whats-er-name coding style</h2>
+                            <h2><strong>6.</strong> whats-er-name Coding Style</h2>
 
                             <h3><strong>6.1</strong> Editor Configuration</h3>
 
