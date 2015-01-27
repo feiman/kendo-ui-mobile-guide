@@ -409,7 +409,7 @@
     <div id="container">
         <div id="header"><div>
         <i class="fa fa-bars fa-align-center fa-lg float-left header-btn" id="toggle-toc"></i>
-        <a href="https://github.com/codylindley/Hybrid-Mobile-Tablet-App-Guidelines" target="_blank" class="fa fa-github fa-align-center fa-lg float-right header-btn" id="github"></a>
+        <a href="https://github.com/telerik/kendo-ui-mobile-guide" target="_blank" class="fa fa-github fa-align-center fa-lg float-right header-btn" id="github"></a>
         <h1><img src="images/telerik-logo.png" />Kendo UI Mobile Guide</h1>
 
         </div></div>
@@ -509,7 +509,7 @@
 
                                 <img src="images/wireframe.png" />
 
-                                <p>The source code can be found on <a href="https://github.com/codylindley/whatsername">GitHub</a>. You should familiarize yourself with the code (i.e. download, build it, use the app) before reading this guide. Keep in mind that the code is more or less pseudo code written for the purpose of crafting this document (i.e. storing image data URIs in <code>localStorage</code> is not an ideal solution). In other words, more attention was given to the rationale around how to form the entire application than to a specific individual part of the app.</p>
+                                <p>The source code can be found on <a href="https://github.com/telerik/whatsername">GitHub</a>. You should familiarize yourself with the code (i.e. download, build it, use the app) before reading this guide. Keep in mind that the code is more or less pseudo code written for the purpose of crafting this document (i.e. storing image data URIs in <code>localStorage</code> is not an ideal solution). In other words, more attention was given to the rationale around how to form the entire application than to a specific individual part of the app.</p>
 
                                 <p>Below is a small walk-thru of the functionality of the application.</p>
 
@@ -982,7 +982,7 @@
     └── whatsername-8b890cb0.js
 </pre>
 
-                            <p>The intention of providing the tree is to set forth a directory structure (including directory names) that could be used to build any application. You can investigate and navigate this directory structure yourself by <a href="https://github.com/codylindley/whatsername">getting the code from GitHub</a> and running a development build and production build using gulp.</p>
+                            <p>The intention of providing the tree is to set forth a directory structure (including directory names) that could be used to build any application. You can investigate and navigate this directory structure yourself by <a href="https://github.com/telerik/whatsername">getting the code from GitHub</a> and running a development build and production build using gulp.</p>
 
                             <h3><strong>3.2</strong> Bower &amp; NPM directory setup</h3>
 
@@ -1059,7 +1059,7 @@
 
                             <p>When you are done developing the application, a production build can be ran to convert your development code into production-ready code. Note that production code is served on a different server (localhost:3027) than development code and is not listening to changes from the development directory, therefore it will not reload the browser as you make changes.</p>
 
-                            <p>Gulp tasks are configured in the <code><a href="https://github.com/codylindley/whatsername/blob/master/gulpfile.js">gulpfile.js</a></code> file found in the root directory of the application. You'll find the file is broken up into wwwDev and wwwProd tasks.</p>
+                            <p>Gulp tasks are configured in the <code><a href="https://github.com/telerik/whatsername/blob/master/gulpfile.js">gulpfile.js</a></code> file found in the root directory of the application. You'll find the file is broken up into wwwDev and wwwProd tasks.</p>
 
                             <h3><strong>4.1</strong> The wwwDev build process &amp; server</h3>
 
@@ -1373,7 +1373,7 @@
 
                             <h3><strong>6.1</strong> Editor Configuration</h3>
 
-                            <p>A <code>.editorconfig</code> (found in root directory of app) is used to maintain <a href="http://editorconfig.org/">consistent coding styles between different editors an IDEs</a>. Below I am showing the <code><a href="https://github.com/codylindley/whatsername/blob/master/.editorconfig">.editorconfig</a></code> used in the whats-er-name application.</p>
+                            <p>A <code>.editorconfig</code> (found in root directory of app) is used to maintain <a href="http://editorconfig.org/">consistent coding styles between different editors an IDEs</a>. Below I am showing the <code><a href="https://github.com/telerik/whatsername/blob/master/.editorconfig">.editorconfig</a></code> used in the whats-er-name application.</p>
 
                             <pre class="brush: html">
                                 # editorconfig.org
@@ -1395,7 +1395,7 @@
 
                             <p>The <a href="https://github.com/yaniswang/HTMLHint">HTMLHint</a> static code analysis tool is used to avoid simple and pesky errors that can occur in HTML.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.htmlhintrc</code> file (found in root directory of app) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/tgfjt/Sublime-htmlhint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/codylindley/whatsername/blob/master/.htmlhintrc">.htmlhintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.htmlhintrc</code> file (found in root directory of app) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/tgfjt/Sublime-htmlhint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.htmlhintrc">.htmlhintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1415,7 +1415,7 @@
 
                             <p>The <a href="https://github.com/CSSLint/csslint">CSSLint</a> code quality tool is used to analysis CSS for errors or potentially other issues that might cause problems.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.csslintrc</code> file (found in root directory of app) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/SublimeLinter/SublimeLinter-csslint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/codylindley/whatsername/blob/master/.csslintrc">.csslintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.csslintrc</code> file (found in root directory of app) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/SublimeLinter/SublimeLinter-csslint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.csslintrc">.csslintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1461,7 +1461,7 @@
 
                             <p>The <a href="http://jshint.com/about/">JSLint</a> tool is used to detect errors and potential problems in JavaScript code as well as enforce coding conventions.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.jshintrc</code> file (found in root directory of app) to setup the rules for this detection. JSHhint is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/uipoet/sublime-jshint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/codylindley/whatsername/blob/master/.jshintrc">.jshintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.jshintrc</code> file (found in root directory of app) to setup the rules for this detection. JSHhint is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/uipoet/sublime-jshint">editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrc">.jshintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1540,7 +1540,7 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>Gulp is actually creating the <code>.jshintrc</code> from a file called <code><a href="https://github.com/codylindley/whatsername/blob/master/.jshintrcCommented.txt">.jshintrcCommented.txt</a></code> before it uses the <code>.jshintrc</code> for configuration. I did this because I wanted a commented/documented file containing the configurations and JSON is invalid when it contains comments. So I set the configurations in the commented file, but Gulp converts it to the <code>.jshintrc</code> file first then uses it to hint JavaScript files.</li>
+                                        <li>Gulp is actually creating the <code>.jshintrc</code> from a file called <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrcCommented.txt">.jshintrcCommented.txt</a></code> before it uses the <code>.jshintrc</code> for configuration. I did this because I wanted a commented/documented file containing the configurations and JSON is invalid when it contains comments. So I set the configurations in the commented file, but Gulp converts it to the <code>.jshintrc</code> file first then uses it to hint JavaScript files.</li>
                                         <li>JavaScript code style can be enforced using something like <a href="http://jscs.info/">JSCS</a>. I've not implemented JS style enforcement to this degree, but if I was going to work on this application with another developer I'd likely add JSCS.</li>
                                     </ul>
                                 </div>
