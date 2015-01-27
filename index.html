@@ -590,11 +590,9 @@
 
                                 <h2><strong>1.</strong> Kendo UI mobile do's</h2>
 
-                                <h3><strong>1.1</strong> Take stock of technologies available on the web platform</h3>
+                                <h3><strong>1.1</strong> Identify and use newer web technologies when available</h3>
 
-                                <p>A Kendo UI mobile app, even if it's running in a webview, is rendered by a browser engine (i.e. a webview is like a browser window tab). Make sure to take note of the <a href="http://mobilehtml5.org/">HTML5</a> (aka <a href="https://developer.mozilla.org/en-US/docs/Web/API">JavaScript APIs</a>), <a href="http://caniuse.com/">CSS</a>, and <a href="http://army8735.me/es5-compat/">JavaScript standards</a> that are supported by the browser engine(s) that will be running your application.</p>
-
-                                <p>It's likely the case that the browser engine you use to render a Kendo UI Mobile application will be a newer, modern browser engine that supports things like <a href="http://kangax.github.io/compat-table/es5/">ES5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">Flexbox</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">Canvas</a>, and <a href="https://developer.mozilla.org/en-US/docs/WebSockets">Web Sockets</a>.</p>
+                                <p>A Kendo UI mobile app, even if it's running in a webview, is more than likley being rendered by a modern browser engine (i.e. a webview is like a browser window tab). Newer browser engines support things like <a href="http://kangax.github.io/compat-table/es5/">ES5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">Flexbox</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">Canvas</a>, and <a href="https://developer.mozilla.org/en-US/docs/WebSockets">Web Sockets</a>.</p>
 
                                 <p>Make sure you are aware of everything you have at your disposal for development and use it.</p>
 
@@ -609,7 +607,7 @@
 
                                 <h3><strong>1.2</strong> Use jQuery 2.x</h3>
 
-                                <p>By simply using jQuery 2.X your app will benefit in the following ways:</p>
+                                <p>By simply using jQuery 2.X your mobile app will benefit in the following ways:</p>
 
                                 <ul>
                                 <li>Performance improvements (up to 5%, depending on the app).</li>
@@ -638,9 +636,11 @@
                                     <li>Plan for change. It's the only constant! Which means you had better not build a large complex system or build on top of one you adopt. Build a very small set of simple modules that work together in a decoupled way.</li>
                                 </ol>
 
+                                <p>You need keep these practices in mind when creating a Kendo UI mobile application.</p>
+
                                 <h3><strong>1.4</strong> Develop using real devices</h3>
 
-                                <p>Simulators and browsers running on a desktop or laptop provide a quick and easy way to run Kendo UI Mobile applications. However, this should not be how you test your code alone. It's critical that during development, development code is tested on the devices it's intended to run on. You need real phones. I recommend at the very least testing on the following device types:</p>
+                                <p><a href="http://developer.telerik.com/featured/looking-glass-adventures-mobile-app-simulation-emulation-device-testing/">Simulators</a> and browsers running on a desktop or laptop provide a quick and easy way to run Kendo UI Mobile applications. However, this should not be how you test your code alone. It's critical that during development, development code is tested on the devices it's intended to run on. You need real phones. I recommend at the very least testing on the following device types:</p>
 
                                 <ul>
                                     <li>Windows Phone / Windows Mobile 8.0+</li>
@@ -650,7 +650,7 @@
 
                                 <h3><strong>1.5</strong> Make use of remote debugging tools</h3>
 
-                                <p>By plugging an Android (4.2+) or iOS (iOS6) device into you computer/laptop and you can use the developer tools found in Safari or Chrome locally to debug a Kendo UI Mobile application running on the phone in a browser.</p>
+                                <p>By plugging an Android (4.2+) or iOS (iOS6) device into you computer/laptop and you can use the developer tools found in Safari or Chrome locally to debug a Kendo UI Mobile application running on the phone in a browser. This is an invaluable tool when using real devices to test code.</p>
 
                                 <ul>
                                     <li>Android mobile debugging: <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Docs</a> | <a href="http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging/2/">Learn</a> | <a href="https://www.youtube.com/watch?v=yjxrr8CrUq0">Watch</a></li>
@@ -668,11 +668,11 @@
 
                                 <h3><strong>1.6</strong> Favor the flat theme</h3>
 
-                                <p>By default, Kendo UI Mobile will use a unique platform specific theme to style the UI. This is considered platform adaptive CSS rendering because the UI will attempt to mimic the native UI of the devices OS. The first three devices (iOS, Android, Windows) in the image below demonstrate this feature in action.<p>
+                                <p>By default, Kendo UI Mobile will use a unique platform specific theme to style the UI. This is considered platform [adaptive CSS rendering](http://docs.telerik.com/kendo-ui/mobile/introduction) because the UI will attempt to mimic the native UI of the devices OS. The first three devices (iOS, Android, Windows) in the image below demonstrate this feature in action.<p>
 
                                 <img src="images/flatskinTheme.png" />
 
-                                <p>However it's better to force Kendo UI Mobile to use the <a href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.mobile.flat.min.css">kendo.mobile.flat.min.css</a> styles for all platforms (e.g. the far right device in the above image).</p>
+                                <p>However, it's better to force Kendo UI Mobile to use the <a href="http://cdn.kendostatic.com/2014.2.903/styles/kendo.mobile.flat.min.css">kendo.mobile.flat.min.css</a> styles for all platforms (e.g. the far right device in the above image).</p>
 
                                 <p>The reason to favor the flat theme is as follows:</p>
 
@@ -702,7 +702,7 @@
                                     <iframe src="//www.youtube.com/embed/jGCdXNMu0No?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
 
-                                <p>But using the theme builder tool might be over kill. If you all you want to do is replace the default turquoise color in the flat theme you can use the CSS below to do so. Simply change the color values in the CSS and make sure that the CSS is included in an HTML document after the flat theme's CSS.</p>
+                                <p>But using the theme builder tool might be over kill. If you all you want to do is replace the default turquoise color in the flat theme you can use the CSS below to do so. Simply change the color values in the CSS and make sure that the CSS is included in an HTML document after the flat theme CSS.</p>
 
                                 <pre class="brush: css">
                                     .km-flat .km-switch-handle,
@@ -752,9 +752,9 @@
                                     &lt;li&gt;&lt;span data-role=&quot;button&quot; data-icon=&quot;about&quot;&gt;&lt;/span&gt;about&lt;/li&gt;
                                 </pre>
 
-                                <p>But don't limit yourself to this short list of icons. There are hundreds of additional icons shipped for use but are simply not setup in CSS to be used. This is presumably done so the CSS does not become bloated with unused CSS declarations. However, be aware of what is avaliable and make use of what you need.<p>
+                                <p>But don't limit yourself to this short list of icons. There are hundreds of additional icons shipped for use but are simply not setup in CSS to be used. This is presumably done so the CSS does not become bloated with unused CSS declarations. Be aware of what is available and make use of what you need.<p>
 
-                                <p>To do this you need to create CSS that references the additional icons. For example, the code below defines a right arrow icon by explicitly referencing the correct unicode/icon in the CSS declaration:</p>
+                                <p>To use these additional icons you need to create CSS that references the additional icons. For example, the code below defines a right arrow icon by explicitly referencing the correct unicode/icon in the CSS declaration:</p>
 
                                 <pre class="brush: css">
                                     .km-arrow-e:after,
@@ -776,7 +776,7 @@
 
                                 <h3><strong>1.9</strong> You'll need a mobile-first CSS framework</h3>
 
-                                <p>Kendo UI Mobile does not lock you into or prohibit the use of mobile-first CSS frameworks to aid with UI development. I've found that even the simplest of custom interfaces (i.e. anything you want to do that is not a widget alone) can benefit from the solutions found in a mobile CSS framework (grids, form styles, form layouts etc...).</p>
+                                <p>Kendo UI Mobile does not lock you into or prohibit the use of mobile-first CSS framework to aid with UI development. I've found that even the simplest of custom interfaces (i.e. anything you want to do that is not a widget alone) can benefit from the solutions found in a mobile CSS framework (mobile first grids, form styles, form layouts etc...).</p>
 
                                 <p>Some battle-tested mobile-first CSS frameworks are:</p>
 
@@ -788,7 +788,7 @@
                                 <li><a href="http://cferdinandi.github.io/kraken/index.html">Kraken</a></li>
                                 </ul>
                                 
-                                <p>If introducing another third-party dependency into the code is not something you prefer doing, then just realize you'll more than likely have to create a miniature custom CSS framework for aiding the development of custom interfaces. In other words, anything that is not a widget will have to be built using custom HTML &amp; CSS. This can come as a rather big surprise if you are use something like <a href="http://ionicframework.com/docs/components/">Ionic CSS components</a>.</p>
+                                <p>If introducing another third-party dependency into the code is not something you prefer doing, then just realize you'll more than likely have to create a miniature custom CSS framework for aiding the development of custom interfaces. In other words, anything that is not a widget will have to be built using custom HTML &amp; CSS. This can come as a rather big surprise if you are expecting something similar to <a href="http://ionicframework.com/docs/components/">Ionic CSS components</a>.</p>
 
                                 <div class="note">
                                     <div class="notes-title">Notes</div>
@@ -802,7 +802,7 @@
 
                                 <h3><strong>1.10</strong> Only use Kendo UI patterns to register events</h3>
 
-                                <p>This might the single most important opinion found in this guide. If you add events in any other manner except the ones describe below you'll have to write your own custom logic to deal with event <a href="http://blogs.telerik.com/appbuilder/posts/13-11-21/what-exactly-is.....-the-300ms-click-delay">delays</a> and missed touches. 
+                                <p>This might be the single most important opinion found in this guide. If you add events in any other manner except the ones describe below you'll have to write your own custom logic to deal with event <a href="http://blogs.telerik.com/appbuilder/posts/13-11-21/what-exactly-is.....-the-300ms-click-delay">delays</a> and missed touches. 
 
                                 <p>All touch related events should be declared in a mobile view using data attributes which refer to a view-model. Below I show the 3 possible ways this can be coded:</p>
 
@@ -890,9 +890,9 @@
                                 <p>Rely on this fact and don't add your own. </p>
 
 
-                            <h3><strong>2.4</strong> Don't use Internet Explorer compatibility modes</h3>
+                            <h3><strong>2.4</strong> Don't use IE compatibility modes</h3>
 
-                            <p>Internet Explorer compatibility modes can exhibit different behavior and rendering bugs, compared to the browser versions they emulate. It is highly recommended to use <a href="https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible">IE's Edge mode via META tag</a> or HTTP header. The meta tag in question is shown below:</p> 
+                            <p>Internet Explorer compatibility modes can exhibit different behavior and rendering bugs, compared to the browser versions they emulate. Don't use compatibility modes, just the Edge mode. Place the following meta tag on all .html pages to enable <a href="https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible">IE's Edge mode.</a>
 
                             <pre class="brush: html">
                                 &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
@@ -900,11 +900,11 @@
 
                             <h3><strong>2.5</strong> Don't use AJAX to navigate to views (i.e. remote views)</h3>
 
-                            <p>Use a build step (like in the example application) to get all the views in the application into a single <code>.html</code> page so that the application does not have to use AJAX to retrieve views when the application is running.</p>
+                            <p>Use a build step (like in the whats-er-name application) to get all the views in the application into a single <code>.html</code> page so that the application does not have to use AJAX to retrieve views when the application is running. View rendering is simplified when you take asynchronous view loading patterns out of the architecture.</p>
 
                             <h3><strong>2.6</strong> Don't fight against declarative widget initialization or MVVM</h3>
 
-                            <p>Kendo UI Mobile widgets and the <code>Application</code> instance are integrated with the <a href="http://docs.telerik.com/kendo-ui/basics/markup#kendo-ui-mobile-application-with-a-view-and-an-autocomplete-widget">declarative widget initialization (i.e. create widgets from markup)</a> and the <a href="http://docs.telerik.com/kendo-ui/mobile/mvvm">MVVM</a> pattern. Learn it, accept it, and don't fight it. Otherwise you'd be better off not using the application and SPA logic found in the <code>Application</code> instance. You'd be better off either going all in on <a href="http://docs.telerik.com/kendo-ui/mobile/angular/angular">AngularJS</a> or using the <a href="http://docs.telerik.com/kendo-ui/mobile/regular-usage">mobile widgets in stand alone mode</a>.</p>
+                            <p>Kendo UI Mobile widgets and the <code>Application</code> instance are integrated with the <a href="http://docs.telerik.com/kendo-ui/basics/markup#kendo-ui-mobile-application-with-a-view-and-an-autocomplete-widget">declarative widget initialization (i.e. create widgets from markup)</a> and the <a href="http://docs.telerik.com/kendo-ui/mobile/mvvm">MVVM</a> pattern. Learn it, accept it, and don't fight it. Otherwise you'd be better off not using the <code>kendo.mobile.Application()</code> and SPA logic found in the <code>Application</code> instance. You'd be better off either going all in on <a href="http://docs.telerik.com/kendo-ui/mobile/angular/angular">AngularJS</a> or using the <a href="http://docs.telerik.com/kendo-ui/mobile/regular-usage">mobile widgets in stand alone mode</a>.</p>
 
                             <h3><strong>2.7</strong> Don't mix AngularJS with Kendo UI MVVM or Mobile SPA logic </h3>
 
@@ -912,9 +912,9 @@
 
                             <h3><strong>2.8</strong> Don't use a dependency manager with mobile views</h3>
 
-                            <p>Assuming, and I do in this guide, you are using the mobile application logic don't attempt to load mobile views with a dependency manager. Doing so creates unnecessary complexity and overhead. Because of the way that the application logic works, all views have to be loaded and depended upon once (due to declarative instantiation) before the <code>Application</code> instance can be instantiated. This fact makes something like <a href="http://requirejs.org/">RequireJS</a> almost pointless due to the complexity it adds to an application. Using RequireJS just so you can have modules is not ideal considering simpler solutions are possible.</p>
+                            <p>Assuming, and I do in this guide, you are using the mobile application logic don't attempt to load mobile views with a dependency manager. Doing so creates unnecessary complexity and overhead. Because of the way that the application logic works, all views have to be loaded and depended upon once (due to declarative instantiation) before the <code>Application</code> instance can be instantiated. This fact makes something like <a href="http://requirejs.org/">RequireJS</a> almost pointless due to the complexity it adds to an application. Using RequireJS just so you can have modules is not ideal considering simpler solutions are possible using a tasking tool (e.g. gulp, grunt etc...).</p>
 
-                            <p>Favor a build strategy (via a tasking runner e.g. Gulp or Grunt) that allows you to keep things in organized modules, but pull everything into a single <code>.html</code> file during the build process, like Kendo UI Mobile assumes will be the case when it runs.</p>
+                            <p>Favor a build strategy using a tasking tool that allows you to keep things in organized modules but pull everything into a single <code>.html</code> file during the build process. Doing this works with Kendo UI Mobile assumptions (i.e everything in a single .html file) not against them.</p>
 
                             </div>
 
@@ -981,15 +981,15 @@
     └── whatsername-8b890cb0.js
 </pre>
 
-                            <p>The intention of providing the tree is to set forth a directory structure (including directory names) that could be used to build any application. You can investigate and navigate this directory structure yourself by <a href="https://github.com/telerik/whatsername">getting the code from GitHub</a> and running a development build and production build using gulp.</p>
+                            <p>I'm detailing the whats-er-name directory tree in this guide to server in order to prescriptive a structure, by example, that can be used for any Kendo UI mobile application. You can investigate and navigate this directory structure yourself by <a href="https://github.com/telerik/whatsername">getting the code from GitHub</a> and running a development build and production build using gulp. The remaining content in this chapter will break will discuss the directory structure in detail. Make sure you are referencing the above directory tree structure as you read.</p>
 
                             <h3><strong>3.2</strong> Bower &amp; NPM directory setup</h3>
 
                             <p>The Bower and NPM package managers are used to download third-party code (i.e. public packages). Below, I describe where these packages are being stored and how each manager is configured for the whats-er-name application.</p>
 
-                            <p>Node packages (used by Gulp) are stored in a directory called <code>node_modules</code> at the root of directory containing the application. This is the default directory name and location, used by NPM, for storing node modules. The <code>package.json</code> file, which defines which modules are need, can also be found at the root of the directory containing the application.</p>
+                            <p>Node packages (used by <a href="http://gulpjs.com/">Gulp</a>) are stored in a directory called <code>node_modules</code> at the root of directory containing the application. This is the default directory name and location, used by NPM, for storing node modules. The <code>package.json</code> file, which defines/configures which modules are need, can also be found at the root of the directory containing the application.</p>
 
-                            <p>Bower, unlike npm, is not being used in the default manner. The <code>bower.json</code> file is in the root of the application directory, which is common, but I am using the <code>.bowerrc</code> file to configure bower to store packages in the <code>wwwDev</code> directory in a folder called <code>bower_components</code>. This might seem odd, until you realize that what you actually see in the browser during development is being served from the <code>wwwDev</code> directory and not the <code>src</code> directory.</p>
+                            <p>Bower, unlike npm, is not being used in the default manner. The <code>bower.json</code> file is in the root of the application directory, which is common, but I am using the <code>.bowerrc</code> file to configure bower to store packages in the <code>wwwDev</code> directory in a folder called <code>bower_components</code>. This might seem odd, until you become aware of the fact that what you actually see in the browser during development is being served from the <code>wwwDev</code> directory and not the <code>src</code> directory.</p>
 
                             <h3><strong>3.3</strong> Src, wwwDev, wwwProd directories</h3>
 
@@ -1006,7 +1006,7 @@
 
                             <h3><strong>3.4</strong> Shared directory</h3>
 
-                            <p>The <code>src/shared</code> directory will contain logically named and grouped modules which are either used globally to run the application or are used by more than one view module. Common files to find in the shared directory are global CSS modules, layout modules, models, and utility modules. Modules placed in the <code>shared</code> directory help to keeping things DRY. If more than one module in the <code>ui</code> directory uses another module it's likely a candidate for placement in the <code>shared</code> directory case you'll find the shared module directly in a logically named directory.</p>
+                            <p>The <code>src/shared</code> directory will contain logically named and grouped modules which are either used globally to run the application or are used by more than one view module. Common files to find in the shared directory are global CSS modules, layout modules, models, and utility modules. Modules placed in the <code>shared</code> directory help to keeping things DRY. If more than one module in the <code>ui</code> directory uses another module it's likely a candidate for placement in the <code>shared</code> directory.</p>
 
                             <h3><strong>3.5</strong> <code>ui</code> directory</h3>
 
@@ -1021,7 +1021,7 @@
                                 <li>view CSS file containing view-specific styles</li>
                                 <li>model JS file</li>
                                 <li>template HTML file containing a template used in the view by a widget</li>
-                                <li>test JS test file (Unit testing either the view-model, functionally testing the view)</li>
+                                <li>test JS test file (test file could be a unit test, testing view-model or functional test, testing the view)</li>
                             </ul>
 
                              <p>These directories of views form a tree/hierarchical structure based on the logical break up of the application from the user's perspective (i.e user interface).</p> 
@@ -1040,6 +1040,8 @@
                                 wwwProd
                                 wwwDev
                             </pre>
+
+                            <p>If it's not obvious this is done so that NPM and Bower packages are included in the repository and local development code (i.e. wwwProd and wwwDev) stays local.</p>
 
                             </div>
 
@@ -1745,7 +1747,11 @@
 
         },2000);
 
-        window.setTimeout(function(){ $( '#toggle-toc' ).trigger('click') }, 5000);
+        window.setTimeout(function(){ 
+            if(window.location.hash === ''){
+            $( '#toggle-toc' ).trigger('click');
+            }
+        }, 5000);
 
 
         /* jshint ignore:end */
