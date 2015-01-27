@@ -1,6 +1,6 @@
 Kendo UI Mobile Guide
 ==================
-Read it: [http://codylindley.github.io/Kendo-UI-Opinionated-Guide-For-Building-Mobile-Apps](http://codylindley.github.io/Kendo-UI-Opinionated-Guide-For-Building-Mobile-Apps)
+Read it: [http://telerik.github.io/kendo-ui-mobile-guide](http://codylindley.github.io/Kendo-UI-Opinionated-Guide-For-Building-Mobile-Apps)
 
 Example app used in guide (separate Github Repo): [https://github.com/codylindley/whatsername](https://github.com/codylindley/whatsername)
 
