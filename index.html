@@ -396,7 +396,7 @@
         }
 
         .ninja {
-            margin:75px auto 0 auto; 
+            margin:75px auto 50px auto; 
             max-height: 170px;
             display:block;
         }
@@ -420,14 +420,13 @@
                     </div>
                     <div id="book">
                         <div id="center-book">
-                            <img src="images/Ninja-1.png" class="ninja noBorder" />
-                            <!--<img src="images/phones.png" style="margin:10px auto 0 auto;max-height: 100px;display:block" class="noBorder" id="Kendoka" />-->
+                            <img src="images/Ninja-1.png" class="ninja noBorder" style="margin-top:125px" />
 
                             <div id="toc1" class="toc">
                                 <h2>Introduction</h2>
 
                                 <h3>What is this?</h3>
-                                <p>This is an opinionated guide prescribing the ideal usage of <a href="ttp://docs.telerik.com/kendo-ui/mobile/introduction">Kendo UI mobile widgets and application tools</a> for building <a href="http://www.webplatform.org/">web platform</a> sites or applications to be run on phones and tablets.</p>
+                                <p>This is an opinionated guide prescribing the ideal usage of <a href="http://docs.telerik.com/kendo-ui/mobile/introduction">Kendo UI mobile widgets and application tools</a> for building <a href="http://www.webplatform.org/">web platform</a> sites or applications to be run on phones and tablets.</p>
 
                                 <div class="note">
                                     <div class="notes-title">Notes</div>
@@ -440,7 +439,7 @@
 
                                 <h3>Why use Kendo UI mobile?</h3>
 
-                                <p>Kendo UI provides specific touch first widgets (i.e. mobile widgets) to be used in the construction of phone and tablet web-based interfaces. In addition to widgets, Kendo UI also provides application logic for building a <a href="http://en.wikipedia.org/wiki/Single-page_application">Single Page Application</a> in a mobile browser or webview (i.e. <a href="http://docs.telerik.com/kendo-ui/mobile/application">Application</a>, <a href="http://docs.telerik.com/kendo-ui/mobile/view">View</a>, <a href="http://docs.telerik.com/kendo-ui/mobile/layout">Layout</a>). In this guide I will refer to the application logic that is provide by Kendo UI as "mobile application logic" (i.e. <code>kendo.mobile.Application</code>).</p>
+                                <p>Kendo UI provides specific touch first widgets to be used in the construction of phone and tablet web-platform interfaces. In addition to widgets, Kendo UI also provides application logic for building a <a href="http://en.wikipedia.org/wiki/Single-page_application">Single Page Application</a> in a mobile browser or webview (i.e. <a href="http://docs.telerik.com/kendo-ui/mobile/application">Application</a>, <a href="http://docs.telerik.com/kendo-ui/mobile/view">View</a>, <a href="http://docs.telerik.com/kendo-ui/mobile/layout">Layout</a>). In this guide I will refer to the application logic that is provide by Kendo UI as "mobile application logic" (i.e. <code>kendo.mobile.Application</code>).</p>
 
                                 <p>While Kendo UI widgets can <a href="http://docs.telerik.com/kendo-ui/mobile/regular-usage">run standalone</a> without an active mobile <code>application</code> instance, this guide assumes the use of the mobile application logic in conjunction with the mobile widgets. Unless you are bringing a replacement for the application logic provided by <code>kendo.mobile.Application</code> (e.g. Angular + ng-view + ng-router), the application logic will almost always be needed alongside the mobile widgets.</p>
 
@@ -448,7 +447,7 @@
                                     <div class="notes-title">Notes</div>
                                     <div class="notes">
                                         <ul>
-                                            <li>Using the Kendo UI mobile SPA application logic is not strictly required for the widgets to function. Kendo UI mobile widgets can be used anywhere with any SPA framework. They can run stand alone for use alongside any Kendo UI widget (i.e. not mobile widget) in any web platform environment.</li>
+                                            <li>Using the Kendo UI mobile SPA application logic is not strictly required for the widgets to function. Kendo UI mobile widgets can be used anywhere with any SPA framework. They can run stand alone for use alongside any Kendo UI web or data visualization widget (i.e. not just mobile widgets) in any web platform environment.</li>
                                             <li>The Kendo UI mobile solution does favor <a href="http://docs.telerik.com/kendo-ui/mobile/angular/angular">integration with Angular</a> (directive are provided) but Angular is not strictly required if the default SPA application logic is not used.</li>
                                         </ul>
                                     </div>
@@ -467,13 +466,13 @@
 
                             <div id="toc2" class="toc">
                                 <h2>Who should read this</h2>
-                                <p>This guide is targeted at front-end developers who have an intermediate understanding of developing applications using HTML, CSS, and JavaScript (e.g. SPA applications using MVVM). And, want to use these skills to build a phone or tablet application using Kendo UI.</p>
+                                <p>This guide is targeted at front-end developers who have an intermediate understanding of developing applications using HTML, CSS, and JavaScript (e.g. SPA applications using MVVM). And, want to use these skills to build a phone or tablet application using Kendo UI mobile solutions.</p>
                             </div>
 
                             <div id="toc3" class="toc">
                                 <h2>Prerequisites</h2>
 
-                                <p>This guide will be the most beneficial to readers that already has a good understanding of Kendo UI solutions and JavaScript application concepts/tools. Be aware that some knowledge is imparted and some knowledge is assumed about the following:</p>
+                                <p>A reader will gain the most from this guide if they already have a good understanding of Kendo UI solutions and JavaScript application concepts/tools. Be aware and prepared that some knowledge is imparted and some knowledge is assumed about the following:</p>
 
                                 <ul>
                                     <li><strong>Single Page Applications</strong> - <a href="http://en.wikipedia.org/wiki/Single-page_application">What is it?</a></li>
@@ -528,8 +527,8 @@
                                   <li><a href="https://github.com/telerik/kendo-ui-core#using-kendo-ui-core-via-the-kendo-static-cdn">the official CDN</a></li>
                                   <li><a href="http://bower.io/search/?q=kendo-ui">Bower</a></li>
                                   <li><a href="https://github.com/telerik/kendo-ui-core">GitHub</a></li>
-                                  <li><a href="http://www.telerik.com/download/kendo-ui-core">Signing up for a 30-day trial of Kendo UI Professional</a> (which contains Kendo UI Core).</li>
-                                  <li><a href="http://www.telerik.com/purchase/kendo-ui">Purchasing</a> a Kendo UI Professional license (which contains Kendo UI Core)</li>
+                                  <li><a href="http://www.telerik.com/download/kendo-ui-core">By signing up for a 30-day trial of Kendo UI Professional</a> (which contains Kendo UI Core).</li>
+                                  <li><a href="http://www.telerik.com/purchase/kendo-ui">By purchasing</a> a Kendo UI Professional license (which contains Kendo UI Core)</li>
                                   </ul>
 
                                 <p>The whats-er-name application uses <a href="http://bower.io/">Bower</a> to install Kendo UI core. However, in this section of the guide, I will briefly detail all of the ways mentioned above that one can obtain the Kendo UI mobile source code.</p>
@@ -1746,7 +1745,7 @@
 
         },2000);
 
-        window.setTimeout(function(){ $( '#toggle-toc' ).trigger('click') }, 6000);
+        window.setTimeout(function(){ $( '#toggle-toc' ).trigger('click') }, 5000);
 
 
         /* jshint ignore:end */
