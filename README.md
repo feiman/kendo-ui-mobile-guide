@@ -1,6 +1,6 @@
 Kendo UI Mobile Guide
 ==================
-Read it: [http://telerik.github.io/kendo-ui-mobile-guide](http://telerik.github.io/kendo-ui-mobile-guide)
+Read it: [kendouimobileguide.com](http://www.kendouimobileguide.com)
 
 Example app used in guide (separate Github Repo): [https://github.com/telerik/whatsername](https://github.com/telerik/whatsername)
 
