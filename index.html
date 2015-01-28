@@ -1057,9 +1057,9 @@
 
                             <h3><strong>4.1</strong> What Is Gulp Doing?</h3>
 
-                            <p>The whats-er-name app uses <a href="http://gulpjs.com/">gulp</a> (a task runner) to create development and production builds that are opened in a browser and served from a local node server (e.g. localhost:3027). Basically, as you develop a build is occurring (i.e. a bunch of tasks you don't want to run manually) every time you make a change to the source code. When a change is detected (i.e. files re-built) the browser tab serving the application is reloaded.</p>
+                            <p>The whats-er-name app uses <a href="http://gulpjs.com/">gulp</a> (a task runner) to create development and production builds that are opened in a browser and served from a local node server (e.g. localhost:3027). Basically, as you develop, a build is occurring (i.e. a bunch of tasks you don't want to run manually) every time you make a change to the source code. When a change is detected (i.e. files re-built) the browser tab serving the application is reloaded.</p>
 
-                            <p>When you are done developing the application, a production build can be ran (i.e. <code>$ gulp prod</code>) to convert your development code into production-ready code. Note that production code is served on a different server (localhost:3028) than development code and is not listening to changes from the development directory, therefore it will not reload the browser as you make changes.</p>
+                            <p>When you are done developing the application, a production build can be run (i.e. <code>$ gulp prod</code>) to convert your development code into production-ready code. Note that production code is served on a different server (localhost:3028) than development code and is not listening to changes from the development directory, therefore it will not reload the browser as you make changes.</p>
 
                             <p>Gulp tasks are configured in the <code><a href="https://github.com/telerik/whatsername/blob/master/gulpfile.js">gulpfile.js</a></code> file found in the root directory of the application. You'll find the file is broken up into wwwDev and wwwProd tasks.</p>
 
@@ -1067,7 +1067,7 @@
 
                             <p>The wwwDev process are the gulp tasks, and reoccurring tasks, which get run during development.</p>
 
-                            <p>The following list summaries the development process and tasks:</p>
+                            <p>The following list summarizes the development process and tasks:</p>
 
                             <ol>
                                 <li>empties the <code>wwwDev</code> directory except for bower components</li>
@@ -1082,16 +1082,16 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>I'm not using any sort of <a href="https://www.npmjs.com/package/gulp-sass/">CSS</a> or <a href="https://www.npmjs.com/package/gulp-coffee/">JS</a> pre-processors. But if you wanted too, you could easily adjust the wwwDev process to add them.</li>
+                                        <li>I'm not using any sort of <a href="https://www.npmjs.com/package/gulp-sass/">CSS</a> or <a href="https://www.npmjs.com/package/gulp-coffee/">JS</a> pre-processors. But if you wanted to, you could easily adjust the wwwDev process to add them.</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <h3><strong>4.2</strong> The wwwProd Build Process &amp; Server</h3>
 
-                            <p>The wwwDev process are the gulp tasks which get run after development is done. The process will create a production ready set of files. For more details on the wwwProd process examine the <a href="https://github.com/telerik/whatsername/blob/master/gulpfile.js">gulp.js</a> file.</p>
+                            <p>The wwwDev process are the gulp tasks which get run after development is done. The process will create a production-ready set of files. For more details on the wwwProd process examine the <a href="https://github.com/telerik/whatsername/blob/master/gulpfile.js">gulp.js</a> file.</p>
 
-                            <p>The following summaries the production process and tasks:</p>
+                            <p>The following summarizes the production process and tasks:</p>
 
                             <ol>
                                 <li>empty the <code>wwwProd</code> directory</li>
@@ -1119,15 +1119,15 @@
 
                             <h3><strong>5.1</strong> <code>index.html</code> Overview</h3>
 
-                            <p>There will be only one valid HTML file (i.e. doctype, header, etc..) in the entire application. It will be called <code>index.html</code> and it will reside in the <code>src</code> folder. All other assets will be consider a module that is included via <code>index.html</code> using a <code>&lt;script&gt;</code> element, <code>&lt;link&gt;</code> element, or the build process (i.e. <a href="https://github.com/coderhaoxin/gulp-file-include">client-side includes</a>).</p>
+                            <p>There will be only one valid HTML file (i.e. doctype, header, etc..) in the entire application. It will be called <code>index.html</code> and it will reside in the <code>src</code> folder. All other assets will be considered a module that is included via <code>index.html</code> using a <code>&lt;script&gt;</code> element, <code>&lt;link&gt;</code> element, or the build process (i.e. <a href="https://github.com/coderhaoxin/gulp-file-include">client-side includes</a>).</p>
 
-                            <p>Consider <code>index.html</code> the master configuration file for including all the necessary modules (models, views, view-models, layouts, templates, CSS, JS etc..) to make the application run. If you open index.html and read the comments it should be obvious that by running <code>index.html</code> in a browser it will load all modules and then instantiate the entire application.</p>
+                            <p>Consider <code>index.html</code> the master configuration file for including all the necessary modules (models, views, view-models, layouts, templates, CSS, JS etc..) to make the application run. If you open index.html and read the comments, it should be obvious that by running <code>index.html</code> in a browser it will load all modules and then instantiate the entire application.</p>
 
                             <p>Note that when the application is instantiated (i.e. <code>kendo.mobile.Application()</code> is invoked) the mobile application logic is instantiating everything (e.g. view, layouts, widgets etc..) that is defined using declarative markup. In other words, anything declaratively defined is instantiated when the application first boots up.</p>
 
                             <h3><strong>5.2</strong> Application Name Space</h3>
 
-                            <p>The Kendo UI Mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/application">application</a> logic, by default, looks for supporting JavaScript in the global scope. This factor forces the use of a global name space instead of privately scoped modules with inject scopes. Thus the whats-er-name application uses a global name space to store JavaScript code relating to the application so that any module can gain a reference to another modules interface.</p>
+                            <p>The Kendo UI Mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/application">application</a> logic, by default, looks for supporting JavaScript in the global scope. This factor forces the use of a global name space instead of privately scoped modules with inject scopes. Thus the whats-er-name application uses a global name space to store JavaScript code relating to the application so that any module can gain a reference to another module's interface.</p>
 
                             <p>The name space <code>whatsername</code> and shortcut name space <code>wrn</code> are defined in the <code>index.html</code> file and shown below.</p>
 
@@ -1142,14 +1142,14 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>The Kendo UI Mobile application (i.e. the construction done via declarative instantiation), assumes that all dependencies can be found in the global scope. This is pretty much the opposite of dependency management/injection, and it's why you'll see references to deeply nested objects in the source code. The modules are not injected into scope, they are referenced where they are attached to the name space and sub name spaces. Obviously more sophisticated solutions for dealing with scope and modules (i.e. dependency management/injection) are available today. But layering these abstractions over the top of the current application logic adds <a href="https://www.youtube.com/watch?v=hrAssE8meRo&feature=youtu.be&t=28m55s">unnecessary complexity</a>. Using nested objects and having to type out longer object references is recommended because it works with the default behavior of the <code>kendo.mobile.Application</code> logic, not against it. If you are using Angular, then you'd obviously be going down the Angular road (i.e. dependency injection) leaving behind all the Kendo mobile application logic.</li>
+                                        <li>The Kendo UI Mobile application (i.e. the construction done via declarative instantiation), assumes that all dependencies can be found in the global scope. This is pretty much the opposite of dependency management/injection, and it's why you'll see references to deeply nested objects in the source code. The modules are not injected into scope, they are referenced where they are attached to the name space and sub name spaces. Obviously, more sophisticated solutions for dealing with scope and modules (i.e. dependency management/injection) are available today but layering these abstractions over the top of the current application logic adds <a href="https://www.youtube.com/watch?v=hrAssE8meRo&feature=youtu.be&t=28m55s">unnecessary complexity</a>. Using nested objects and having to type out longer object references is recommended because it works with the default behavior of the <code>kendo.mobile.Application</code> logic, not against it. If you are using Angular, then you'd obviously be going down the Angular road (i.e. dependency injection) leaving behind all the Kendo mobile application logic.</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <h3><strong>5.3</strong> Run/Instantiate Application</h3>
 
-                            <p>Like I already stated, the mobile application is instantiated by the last script parsed in the <code>index.html</code> file. This is where you'd provide any settings for the <code>kendo.mobile.Application</code> instance. Below I am showing the JavaScript which instantiates the whats-er-name application.</p>
+                            <p>As previously stated, the mobile application is instantiated by the last script parsed in the <code>index.html</code> file. This is where you would provide any settings for the <code>kendo.mobile.Application</code> instance. Below I am showing the JavaScript which instantiates the whats-er-name application.</p>
                             
                             <pre class="brush: js">
                                     wrn.app = new kendo.mobile.Application($(document.body), { 
@@ -1217,7 +1217,7 @@
 
                             <h3><strong>5.5</strong> Defining View Modules</h3>
 
-                            <p>View modules are html files containing mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/view">views</a> with declarative attributes and likely declaratively define mobile widgets. This shouldn't be a surprise to you if you fully grok the MVVM pattern. The view declaratively connects to the view-model. For example in the <code>viewerView.html</code> file shown below the <code>data-model</code> attribute binds <code>viewerViewModel.js</code> to the view declaratively when the application is started.</p> 
+                            <p>View modules are html files containing mobile <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/view">views</a> with declarative attributes and likely declaratively define mobile widgets. This shouldn't be a surprise to you if you fully grok the MVVM pattern. The view declaratively connects to the view-model. For example, in the <code>viewerView.html</code> file shown below the <code>data-model</code> attribute binds <code>viewerViewModel.js</code> to the view declaratively when the application is started.</p> 
 
                             <pre class="brush: html">
                                 &lt;div id=&quot;viewerView&quot; 
@@ -1230,7 +1230,7 @@
                                 &lt;/div&gt;
                             </pre>
 
-                            <p>When defining a view module keep in mind each view is a mobile view widget and associated with a declaratively instantiated <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/layout">layout</a> widget. The view also contains other mobile widgets that are more than likely connected to a view-model associated with a model.</p>
+                            <p>When defining a view module, keep in mind each view is a mobile view widget and associated with a declaratively instantiated <a href="http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/layout">layout</a> widget. The view also contains other mobile widgets that are likely connected to a view-model associated with a model.</p>
 
                             <div class="note">
                                 <div class="notes-title">Notes</div>
@@ -1244,9 +1244,9 @@
 
                             <h3><strong>5.6</strong> Defining Layout Modules</h3>
 
-                            <p>The whats-er-name application uses a single layout for all of its mobile views (i.e. <code>/src/shared/layouts/global/globalLayout.html</code>), but if you mimic the architecture prescribed in this guide, you'll more than likely have more than one view  layout and associating styles. When this occurs, the HTML and CSS should be placed in the same directory which contains the view HTML. Make sure you end both files with the word "Layout".</p>
+                            <p>The whats-er-name application uses a single layout for all of its mobile views (i.e. <code>/src/shared/layouts/global/globalLayout.html</code>), but if you mimic the architecture prescribed in this guide, you will probably have more than one view layout and associating styles. When this occurs, the HTML and CSS should be placed in the same directory which contains the view HTML. Make sure you end both files with the word "Layout".</p>
 
-                            <p>For example, if the <code>viewerView.html</code> module used a unique layout there would be a viewerLayout.html module and possibly a viewerLayout.css file in the same directory (or, shared directory if the view shared the layout with another view).</p>
+                            <p>For example, if the <code>viewerView.html</code> module used a unique layout, there would be a viewerLayout.html module and possibly a viewerLayout.css file in the same directory (or, shared directory if the view shared the layout with another view).</p>
 
                             <h3><strong>5.7</strong> Defining view-model Modules</h3>
 
@@ -1291,7 +1291,7 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>The whats-er-name application does not contain any models that are unique to a view. The two models used are shared among multiple views, and thus found in the shared directory. If a view has a unique model, it would of course be found in the same directory as the view-model and the rest of the supporting modules.</li>
+                                        <li>The whats-er-name application does not contain any models that are unique to a view. The two models used are shared among multiple views, and thus found in the shared directory. If a view has a unique model, it would, of course, be found in the same directory as the view-model and the rest of the supporting modules.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1326,7 +1326,7 @@
                                 <div class="notes">
                                     <ul>
                                         <li>Model name spaces should end with "Model".</li>
-                                        <li>If a model does not get used by more than one logical ui grouping, it would be perfectively logical to store it in the directory containing the rest of the ui's specific files.</li>
+                                        <li>If a model does not get used by more than one logical ui grouping, it would be perfectly logical to store it in the directory containing the rest of the ui's specific files.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1335,14 +1335,14 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>A model can often be a simple, static JSON object. But it's more likely that you'll be using the Kendo UI <code>DataSource</code> abstraction to wrap local or remote data. In the whats-er-name app I am using it to force a <code>DataSource</code> into offline mode to manage JSON in <code>localStorage</code>.</li>
+                                        <li>A model can often be a simple, static JSON object but it's more likely that you'll be using the Kendo UI <code>DataSource</code> abstraction to wrap local or remote data. In the whats-er-name app I am using it to force a <code>DataSource</code> into offline mode to manage JSON in <code>localStorage</code>.</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <h3><strong>5.9</strong> Defining Utility Modules</h3>
                             
-                            <p>Any utility objects/functionality needed by all JavaScript modules can be place directly on the name space object as property which specifically describes the utility. Below I showing the <code>makeId.js</code> utility code as an example pattern for adding utility JavaScript modules into the whats-er-name architecture.</p>
+                            <p>Any utility objects/functionality needed by all JavaScript modules can be place directly on the name space object as property which specifically describes the utility. Below I show the <code>makeId.js</code> utility code as an example pattern for adding utility JavaScript modules into the whats-er-name architecture.</p>
 
                             <pre class="brush: js">
                                 (function(wrn){
@@ -1387,7 +1387,7 @@
                                 <div class="notes">
                                     <ul>
                                         <li>Template module files should end with the string "Template" (e.g. <code>scrollerTemplate.html</code>)</li>
-                                        <li>To clarify template modules house an html <code>&lt;script&gt;</code> element that contains HTML. Notice that Kendo UI templates construed using a <code>&lt;script&gt;</code> (<a href="http://docs.telerik.com/kendo-ui/framework/templates/overview#internal-vs-external-templates">as opposed to JS strings, in JS</a>) have a custom type of <code>text/x-kendo-template</code>.</li>
+                                        <li>To clarify, template modules house an html <code>&lt;script&gt;</code> element that contains HTML. Notice that Kendo UI templates construed using a <code>&lt;script&gt;</code> (<a href="http://docs.telerik.com/kendo-ui/framework/templates/overview#internal-vs-external-templates">as opposed to JS strings, in JS</a>) have a custom type of <code>text/x-kendo-template</code>.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1431,7 +1431,7 @@
 
                             <p>The <a href="https://github.com/yaniswang/HTMLHint">HTMLHint</a> static code analysis tool is used to avoid simple and pesky errors that can occur in HTML.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.htmlhintrc</code> file (found in root directory) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/tgfjt/Sublime-htmlhint">code editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.htmlhintrc">.htmlhintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.htmlhintrc</code> file (found in root directory) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/tgfjt/Sublime-htmlhint">code editor while coding</a>. Below are the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.htmlhintrc">.htmlhintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1449,9 +1449,9 @@
 
                             <h3><strong>6.3</strong> CSS Linting</h3>
 
-                            <p>The <a href="https://github.com/CSSLint/csslint">CSSLint</a> code quality tool is used to analysis CSS for errors or potential other issues that might cause problems.</p>
+                            <p>The <a href="https://github.com/CSSLint/csslint">CSSLint</a> code quality tool is used to analyze CSS for errors or potential other issues that might cause problems.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.csslintrc</code> file (found in root directory) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/SublimeLinter/SublimeLinter-csslint">code editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.csslintrc">.csslintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.csslintrc</code> file (found in root directory) to setup the rules for this analysis. The analysis is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/SublimeLinter/SublimeLinter-csslint">code editor while coding</a>. Below are the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.csslintrc">.csslintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1497,7 +1497,7 @@
 
                             <p>The <a href="http://jshint.com/about/">JSLint</a> tool is used to detect errors and potential problems in JavaScript code as well as enforce coding conventions.</p>
 
-                            <p>In the whats-er-name app I am using a <code>.jshintrc</code> file (found in root directory) to setup the rules for this detection. JSHhint is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/uipoet/sublime-jshint">code editor while coding</a>. Below is the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrc">.jshintrc</a></code> used in the whats-er-name app.</p>
+                            <p>In the whats-er-name app I am using a <code>.jshintrc</code> file (found in root directory) to setup the rules for this detection. JSHhint is currently running during the production build, but I recommend you also run it locally via your <a href="https://github.com/uipoet/sublime-jshint">code editor while coding</a>. Below are the contents of the <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrc">.jshintrc</a></code> used in the whats-er-name app.</p>
 
                             <pre class="brush: js">
                                 {
@@ -1576,8 +1576,8 @@
                                 <div class="notes-title">Notes</div>
                                 <div class="notes">
                                     <ul>
-                                        <li>Gulp is actually creating the <code>.jshintrc</code> from a file called <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrcCommented.txt">.jshintrcCommented.txt</a></code> before it uses the <code>.jshintrc</code> for configuration. I did this because I wanted a commented/documented file containing the configurations and JSON is invalid when it contains comments. So I set the configurations in the commented file, but Gulp converts it to the <code>.jshintrc</code> file first then uses it to hint JavaScript files.</li>
-                                        <li>JavaScript code style can be enforced using something like <a href="http://jscs.info/">JSCS</a>. I've not implemented JS style enforcement to this degree in the whats-er-name app, but if I was going to work on this application with another developer I'd likely add JSCS.</li>
+                                        <li>Gulp is actually creating the <code>.jshintrc</code> from a file called <code><a href="https://github.com/telerik/whatsername/blob/master/.jshintrcCommented.txt">.jshintrcCommented.txt</a></code> before it uses the <code>.jshintrc</code> for configuration. I did this because I wanted a commented/documented file containing the configurations and JSON is invalid when it contains comments. So, I set the configurations in the commented file, but Gulp converts it to the <code>.jshintrc</code> file first then uses it to hint JavaScript files.</li>
+                                        <li>JavaScript code style can be enforced using something like <a href="http://jscs.info/">JSCS</a>. I have not implemented JS style enforcement to this degree in the whats-er-name app, but if I was going to work on this application with another developer I would likely add JSCS.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1593,9 +1593,9 @@
                             
                             <h2><strong>7.</strong> Conclusion</h2>
 
-                            <p>The entire point of this guide was to offer opinionated insights into developing sites and applications using Kendo UI mobile widgets and its application logic. I have yet to offer any insights into actual hybrid mobile development. Once the Kendo UI mobile solution as a whole has been properly grokked, the next logical question is how does one take this knowledge and use it to develop a <a href="http://blogs.telerik.com/appbuilder/posts/12-06-14/what-is-a-hybrid-mobile-app-">hybrid mobile application</a>.</p>
+                            <p>The entire point of this guide was to offer opinionated insights into developing sites and applications using Kendo UI mobile widgets and its application logic. I have yet to offer any insights into actual hybrid mobile development. Once the Kendo UI mobile solution, as a whole, has been properly grokked, the next logical question is how does one take this knowledge and use it to develop a <a href="http://blogs.telerik.com/appbuilder/posts/12-06-14/what-is-a-hybrid-mobile-app-">hybrid mobile application</a>.</p>
 
-                            <p>The next part of this guide will offer insights into hybrid mobile development using Kendo UI mobile and <a href="http://www.telerik.com/appbuilder'">AppBuilder</a> together. This will be accomplished by taking the whats-er-name application and re-developing it assuming a hybrid approach is the focus of the insights offered.</p>
+                            <p>The next part of this guide will offer insights into hybrid mobile development using Kendo UI mobile and <a href="http://www.telerik.com/appbuilder'">AppBuilder</a> together. This will be accomplished by taking the whats-er-name application and re-developing it, assuming a hybrid approach is the focus of the insights offered.</p>
 
                             </div>
 
